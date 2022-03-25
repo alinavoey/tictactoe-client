@@ -4,7 +4,7 @@ const config = require('../config.js')
 const gameStart = function (){
     return $.ajax({
     method: "POST",
-    url: config.apiUrls + "/games",
+    url: config.apiUrl + "/games",
     headers: {
         Authorization: 'Bearer ' + store.user.token
     },

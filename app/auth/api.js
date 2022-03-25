@@ -4,7 +4,7 @@ const config = require('../config.js')
 const signUp = function(data) {
     return $.ajax({
         method: 'POST',
-        url: config.apiUrls + '/sign-up',
+        url: config.apiUrl + '/sign-up',
         data
     })
 }
@@ -12,7 +12,7 @@ const signUp = function(data) {
 const signIn = function(data) {
     return $.ajax({
         method: 'POST',
-        url: config.apiUrls + '/sign-in',
+        url: config.apiUrl + '/sign-in',
         data
     })
 }
@@ -20,7 +20,7 @@ const signIn = function(data) {
 const changePw = function(data) {
     return $.ajax({
         method: 'PATCH',
-        url: config.apiUrls + '/change-password',
+        url: config.apiUrl + '/change-password',
         headers: {
             Authorization: 'Bearer ' + store.user.token
         },
@@ -31,7 +31,7 @@ const changePw = function(data) {
 const signOut = function() {
     return $.ajax({
         method: 'DELETE',
-        url: config.apiUrls + '/sign-out',
+        url: config.apiUrl + '/sign-out',
         headers: {
             Authorization: 'Bearer ' + store.user.token
         }
