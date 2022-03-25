@@ -14,6 +14,9 @@ const onSignInSuccess = function(response) {
     $('form').trigger('reset')
     console.log(response);
     store.user = response.user
+
+    // display button to start game when sign in is successful
+    $('#game-display').html('<button id="start-game-btn" type="click">Start Game</button>')
 }
 
 const onSignInFailure = function() {
@@ -32,6 +35,8 @@ const onChangePwFailure = function() {
 const onSignOutSuccess = function() {
     $('#auth-display').html('<p>Sign Out Successful</p>')
     $('form').trigger('reset')
+
+    $('#game-display').html('')
 }
 
 const onSignOutFailure = function() {
