@@ -12,17 +12,26 @@ const gameStart = function (){
   })
   }
 
-//   const gameShow = function() {
-//     return $.ajax({
-//         method: "GET",
-//         url: "https://tic-tac-toe-api-development.herokuapp.com/games/" + store.game._id,
-//         headers: {
-//             Authorization: 'Bearer ' + store.user.token
-//         }
-//       })
-//   }
+  const updateGame = function(index, value, over) {
+    return $.ajax({
+        method: "PATCH",
+        url: "https://tic-tac-toe-api-development.herokuapp.com/games/" + store.game._id,
+        headers: {
+            Authorization: 'Bearer ' + store.user.token
+        },
+        data: {
+                "game": {
+                    "cell": {
+                        "index": index,
+                        "value": value
+                        },
+                    "over": over
+                    }
+                }
+        })
+    }
 
   module.exports = {
-      gameStart
-    //   gameShow
+      gameStart,
+      updateGame
   }
