@@ -1,3 +1,4 @@
+const { Button } = require('bootstrap')
 const store = require('../store.js')
 
 const onSignUpSuccess = function() {
@@ -15,6 +16,10 @@ const onSignInSuccess = function(response) {
     console.log(response);
     store.user = response.user
 
+    $('#nav-display').show()
+    $('.home-page').remove()
+
+
     // display button to start game when sign in is successful
     $('#game-display').html('<button id="start-game-btn" type="click">Start Game</button>')
 }
@@ -26,6 +31,7 @@ const onSignInFailure = function() {
 const onChangePwSuccess = function() {
     $('#auth-display').html('<p>Password Change Successful</p>')
     $('form').trigger('reset')
+    $('#change-pw-display').hide()
 }
 
 const onChangePwFailure = function() {
@@ -36,7 +42,10 @@ const onSignOutSuccess = function() {
     $('#auth-display').html('<p>Sign Out Successful</p>')
     $('form').trigger('reset')
 
-    $('#game-display').html('')
+    $('#game-display').hide()
+    $('#game-board').hide()
+    $('#nav-display').hide()
+    $('#change-pw-display').hide()
 }
 
 const onSignOutFailure = function() {

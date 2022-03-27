@@ -2,6 +2,15 @@ const getFormFields = require('../../lib/get-form-fields.js')
 const authApi = require('./api.js')
 const authUi = require('./ui.js')
 
+const onCreateAccount = function() {
+    $('#sign-up-display').show()
+}
+
+const onChangePwBtn = function(){
+    $('#change-pw-display').show()
+    $('#auth-display').html('')
+}
+
 const onSignUp = function(event) {
     event.preventDefault()
 
@@ -49,5 +58,7 @@ module.exports = {
     onSignUp,
     onSignIn,
     onChangePw,
-    onSignOut
+    onSignOut,
+    onCreateAccount,
+    onChangePwBtn
 }
