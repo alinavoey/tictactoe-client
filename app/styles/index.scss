@@ -1,6 +1,87 @@
 @import '~bootstrap/scss/bootstrap';
 
+$main-color: #25a18e;
+
+#game-board, #sign-up-display, #change-pw-display, #nav-display{
+    display: none;
+}
+
+body{
+    background-color: #242423;
+    color: $main-color;
+}
+
+.main-content{
+    text-align: center;
+    padding: 10px
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+h3{
+    letter-spacing: 4px;
+
+}
+
+hr{
+    color: $main-color;
+}
+
+.home-page{
+    margin: 5% 25%;
+    padding: 80px;
+    border: 4px solid $main-color;
+}
+
+.home-page form input, #change-pw-form input{
+    padding: 10px; 
+    margin: 5px 0;
+}
+
+.home-page button, #change-pw-form button{
+    padding: 10px;
+    margin: 5px 0;
+    letter-spacing: 4px;
+    border: none;
+    background-color: $main-color;;
+    color: white;
+    border: 1px solid #242423;
+}
+
+#start-game-btn{
+    background-color: #242423;
+    border: 2px solid $main-color;
+    padding: 30px 50px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#start-game-btn:hover, #change-pw-btn:hover, #sign-out-btn:hover{
+    background-color: $main-color;
+    color: #242423;
+}
+
+#start-game-btn:hover{
+    transition: 0.5s;
+}
+
+#change-pw-btn, #sign-out-btn{
+    background-color: #242423;
+    border: 2px solid $main-color;
+    padding: 10px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .box{
+    cursor: pointer;
     align-items: center;
     display: flex;
     height: 150px;
@@ -8,18 +89,29 @@
 }
 
 .box-top{
-    border-bottom: 1px solid black;
+    border-bottom: 5px solid $main-color;;
 }
 
 .box-middle{
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 5px solid $main-color;;
+    border-right: 5px solid $main-color;;
 }
 
 .box-bottom{
-    border-top: 1px solid black;
+    border-top: 5px solid $main-color;;
 }
 
-#game-board{
-    display: none;
+.container{
+    width: 50%;
+    margin-top: 5%;
+    font-size: 80px;
+    color: white;
 }
+
+#winning-message{
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: white;
+}
+
