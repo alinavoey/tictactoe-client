@@ -15,7 +15,7 @@ const gameStart = function (){
   const updateGame = function(index, value, over) {
     return $.ajax({
         method: "PATCH",
-        url: config.apiUrl + store.game._id,
+        url: config.apiUrl + "/games" + store.game._id,
         headers: {
             Authorization: 'Bearer ' + store.user.token
         },
