@@ -20,9 +20,10 @@ const onSignInSuccess = function(response) {
     $('#nav-display').show()
     $('.home-page').hide()
 
-
     // display button to start game when sign in is successful
     $('#game-display').html('<button id="start-game-btn" type="click">New Game</button>')
+
+    $('#bg-image').html('<img src="public/monster.png">')
 }
 
 const onSignInFailure = function() {

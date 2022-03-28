@@ -71,6 +71,7 @@ hr{
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin: 2% 0;
 }
 
 #start-game-btn:hover, #change-pw-btn:hover, #sign-out-btn:hover{
@@ -115,7 +116,7 @@ hr{
 
 .container{
     width: 40%;
-    margin-top: 5%;
+    margin-top: 2%;
     font-size: 80px;
     color: white;
 }
@@ -125,5 +126,19 @@ hr{
     text-transform: uppercase;
     letter-spacing: 4px;
     color: white;
+}
+
+#bg-image{
+    z-index: -1;
+    transform: rotate(-45deg);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform-origin: 285px 100px;
+}
+
+#bg-image:hover{
+    transform: rotate(-55deg);
+    transition: 0.3s;
 }
 
