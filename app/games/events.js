@@ -17,6 +17,7 @@ const winningPatterns = [
 
 const onGameStart = function(){
     console.log('inside of game event')
+    playerX = true;
     gameApi.gameStart()
         .then((response) => gameUi.onGameStartSuccess(response))
         .catch(() => gameUi.onGameStartFailure())
