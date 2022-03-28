@@ -4,6 +4,7 @@ const store = require('../store.js')
 const onSignUpSuccess = function() {
     $('#auth-display').html('<p>Sign Up Successful</p>')
     $('form').trigger('reset')
+    $('#sign-up-display').hide()
 }
 
 const onSignUpFailure = function() {
@@ -17,11 +18,11 @@ const onSignInSuccess = function(response) {
     store.user = response.user
 
     $('#nav-display').show()
-    $('.home-page').remove()
+    $('.home-page').hide()
 
 
     // display button to start game when sign in is successful
-    $('#game-display').html('<button id="start-game-btn" type="click">Start Game</button>')
+    $('#game-display').html('<button id="start-game-btn" type="click">New Game</button>')
 }
 
 const onSignInFailure = function() {
@@ -29,23 +30,25 @@ const onSignInFailure = function() {
 }
 
 const onChangePwSuccess = function() {
-    $('#auth-display').html('<p>Password Change Successful</p>')
+    $('.auth-modal-display').html('<p>Password Change Successful</p>')
     $('form').trigger('reset')
-    $('#change-pw-display').hide()
+    //$('#change-pw-display').hide()
 }
 
 const onChangePwFailure = function() {
-    $('#auth-display').html('<p>Password Change Failed</p>')
+    $('.auth-modal-display').html('<p>Password Change Failed</p>')
+    $('form').trigger('reset')
 }
 
 const onSignOutSuccess = function() {
     $('#auth-display').html('<p>Sign Out Successful</p>')
-    $('form').trigger('reset')
+    $('#sign-out-display').html('<iframe src="https://giphy.com/embed/m9eG1qVjvN56H0MXt8" width="295" height="480"></iframe>')
 
     $('#game-display').hide()
     $('#game-board').hide()
     $('#nav-display').hide()
     $('#change-pw-display').hide()
+    $('#winning-message').hide()
 }
 
 const onSignOutFailure = function() {

@@ -15,35 +15,71 @@
 
       <div id="nav-display">
         <button id="sign-out-btn">Sign Out</button>
-        <button id="change-pw-btn">Change Password</button>
-      </div>
+        <!-- <button id="change-pw-btn">Change Password</button> -->
+
+        <!-- Button trigger modal -->
+        <button type="button" id="change-pw-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Change Password
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                <div id="change-pw-display">
+                  <form id="change-pw-form">
+                    <input name="passwords[old]" type="password" placeholder="old password" required> <br>
+                    <input name="passwords[new]" type="password" placeholder="new password" required> <br>
+                    <button type="submit">Change Password</button> <br>
+
+                    <section class="auth-modal-display"></section>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div> <!-- end modal -->
+      </div> <!--end nav-display div-->
 
       <div class="main-content">
-      <h1>Tic Tac Toe</h1>
+        <h1>Tic Tac Toe</h1>
 
-      <div class="home-page">
-      <div id="sign-up-display">
-      <h3>Sign Up</h3> <hr>
-      <form id="sign-up-form">
-        <input name="credentials[email]" type="email" placeholder="Enter your email" required> <br>
-        <input name="credentials[password]" type="password" placeholder="Enter a password" required> <br>
-        <input name="credentials[password_confirmation]" type="password" placeholder="Enter password again" required> <br>
-        <button type="submit">Sign Up</button> <br>
-      </form>
-    </div>
+        <div class="home-page">
 
-    <div id="sign-in-display"> 
-      <h3>Sign In</h3> <hr>
-      <form id="sign-in-form">
-        <input name="credentials[email]" type="email" placeholder="email" required> <br>
-        <input name="credentials[password]" type="password" placeholder="password" required> <br>
-        <button type="submit">Sign In</button> <br>
-      </form>
+          <img src="public/monster.png"> <br>
+        
+          <div id="sign-up-display">
+            <h3>Sign Up</h3> <hr>
+            <form id="sign-up-form">
+              <input name="credentials[email]" type="email" placeholder="Enter your email" required> <br>
+              <input name="credentials[password]" type="password" placeholder="Enter a password" required> <br>
+              <input name="credentials[password_confirmation]" type="password" placeholder="Enter password again" required> <br>
+              <button type="submit">Sign Up</button> <br>
+            </form>
+          </div> <!--end sign-up-display div-->
 
-      <button id="create-account-btn">Create New Account</button>
-    </div>
-    </div>
+          <div id="sign-in-display"> 
+            <h3>Sign In</h3> <hr>
+            <form id="sign-in-form">
+              <input name="credentials[email]" type="email" placeholder="email" required> <br>
+              <input name="credentials[password]" type="password" placeholder="password" required> <br>
+              <button type="submit">Sign In</button>
+            </form>
+          </div> <!--end sign-in-display div-->
 
+          <button id="sign-in-btn">Sign In</button> <br>
+          <button id="create-account-btn">Create New Account</button> 
+
+        </div> <!--end home-page div-->
+
+    <!-- change password 
     <div id="change-pw-display">
       <h3>Change Password</h3>
       <form id="change-pw-form">
@@ -52,6 +88,7 @@
         <button type="submit">Change Password</button>
       </form>
     </div>
+    -->
 
       <section id="auth-display"></section>
 
@@ -69,10 +106,12 @@
             <div class="col-4 box box-bottom box-middle" id="box7"></div>
             <div class="col-4 box box-bottom" id="box8"></div>
         </div>
-    </div>
+    </div> <!--end game-board div-->
 
     <div id="winning-message"></div>
 
-    </div>
+    <div id="sign-out-display"></div>
+
+    </div> <!--end main-content div-->
     </body>
 </html>

@@ -2,14 +2,23 @@ const getFormFields = require('../../lib/get-form-fields.js')
 const authApi = require('./api.js')
 const authUi = require('./ui.js')
 
+const onSignInAccount = function() {
+    $('#sign-in-display').show()
+    $('#create-account-btn').show()
+    $('#sign-up-display').hide()
+    $('#sign-in-btn').hide()
+}
 const onCreateAccount = function() {
     $('#sign-up-display').show()
+    $('#sign-in-btn').show()
+    $('#sign-in-display').hide()
+    $('#create-account-btn').hide()
 }
 
-const onChangePwBtn = function(){
-    $('#change-pw-display').show()
-    $('#auth-display').html('')
-}
+// const onChangePwBtn = function(){
+//     $('#change-pw-display').show()
+//     $('#auth-display').html('')
+// }
 
 const onSignUp = function(event) {
     event.preventDefault()
@@ -59,6 +68,7 @@ module.exports = {
     onSignIn,
     onChangePw,
     onSignOut,
+    onSignInAccount,
     onCreateAccount,
-    onChangePwBtn
+    // onChangePwBtn
 }
