@@ -16,7 +16,6 @@ const winningPatterns = [
 ]
 
 const onGameStart = function(){
-    console.log('inside of game event')
     playerX = true;
     gameApi.gameStart()
         .then((response) => gameUi.onGameStartSuccess(response))
@@ -78,9 +77,11 @@ const onGameBoard = function(event) {
         })
     }
 
-    gameApi.updateGame(boxIndex, boxValue, store.game.over)
-    .then((response) => gameUi.onGameUpdateSuccess(response))
-    .catch(() => gameUi.onGameUpdateFailure())
+    if (!store.game.over){
+        gameApi.updateGame(boxIndex, boxValue, store.game.over)
+        .then((response) => gameUi.onGameUpdateSuccess(response))
+        .catch(() => gameUi.onGameUpdateFailure())
+    }
 
 }
 

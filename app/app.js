@@ -15,12 +15,8 @@ $(() => {
   $('#sign-out-btn').on('click', authEvents.onSignOut)
   $('#sign-in-btn').on('click', authEvents.onSignInAccount)
   $('#create-account-btn').on('click', authEvents.onCreateAccount)
-  // $('#change-pw-btn').on('click', authEvents.onChangePwBtn)
 
   // Game event handlers
   $('#game-display').on('click', '#start-game-btn', gameEvents.onGameStart)
-
-  // Game Board handlers
   $('#game-board').on('click', gameEvents.onGameBoard)
-
 })

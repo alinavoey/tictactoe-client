@@ -15,11 +15,6 @@ const onCreateAccount = function() {
     $('#create-account-btn').hide()
 }
 
-// const onChangePwBtn = function(){
-//     $('#change-pw-display').show()
-//     $('#auth-display').html('')
-// }
-
 const onSignUp = function(event) {
     event.preventDefault()
 
@@ -69,6 +64,5 @@ module.exports = {
     onChangePw,
     onSignOut,
     onSignInAccount,
-    onCreateAccount,
-    // onChangePwBtn
+    onCreateAccount
 }

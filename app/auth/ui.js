@@ -18,7 +18,9 @@ const onSignInSuccess = function(response) {
     store.user = response.user
 
     $('#nav-display').show()
+    $('#change-pw-display').show()
     $('.home-page').hide()
+    $('#sign-in-display').hide()
 
     // display button to start game when sign in is successful
     $('#game-display').html('<button id="start-game-btn" type="click">New Game</button>')
@@ -33,7 +35,6 @@ const onSignInFailure = function() {
 const onChangePwSuccess = function() {
     $('.auth-modal-display').html('<p>Password Change Successful</p>')
     $('form').trigger('reset')
-    //$('#change-pw-display').hide()
 }
 
 const onChangePwFailure = function() {
@@ -43,13 +44,16 @@ const onChangePwFailure = function() {
 
 const onSignOutSuccess = function() {
     $('#auth-display').html('<p>Sign Out Successful</p>')
-    $('#sign-out-display').html('<iframe src="https://giphy.com/embed/m9eG1qVjvN56H0MXt8" width="295" height="480"></iframe>')
+    $('#winning-message').html('')
+    $('#bg-image').html('')
+    $('#game-display').html('')
 
-    $('#game-display').hide()
+    $('.home-page').show()
+    $('#sign-in-btn').show()
     $('#game-board').hide()
     $('#nav-display').hide()
     $('#change-pw-display').hide()
-    $('#winning-message').hide()
+
 }
 
 const onSignOutFailure = function() {
