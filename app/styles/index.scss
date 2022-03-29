@@ -1,0 +1,189 @@
+@import '~bootstrap/scss/bootstrap';
+
+$main-color: #80afe4;
+$bg-color: #242423;
+
+#game-board, #nav-display, #sign-up-display, #sign-in-display{
+    display: none;
+}
+
+body{
+    background-color: $bg-color;
+    color: $main-color;
+}
+
+.main-content{
+    text-align: center;
+    padding: 10px
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 16px;
+}
+
+h3{
+    letter-spacing: 4px;
+
+}
+
+hr{
+    color: $main-color;
+}
+
+.home-page{
+    margin: 0 25%;
+    padding: 70px;
+    border: 4px solid $main-color;
+}
+
+.home-page form input, #change-pw-form input{
+    padding: 5px; 
+    margin: 5px 0;
+    width: 50%;
+}
+
+.home-page button, #change-pw-form button{
+    padding: 10px;
+    margin: 5px 0;
+    letter-spacing: 4px;
+    border: none;
+    background-color: $main-color;;
+    color: white;
+    border: 1px solid $bg-color;
+}
+
+#change-pw-form{
+    text-align: center;
+}
+
+.home-page button:hover, #change-pw-form button:hover{
+    border: 1px solid $bg-color;
+    background-image: linear-gradient(to right, $main-color, #97d8c4, rgb(255, 255, 176));
+    color: $bg-color;
+}
+
+#start-game-btn{
+    background-color: $bg-color;
+    border: 2px solid $main-color;
+    padding: 30px 50px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2% 0;
+}
+
+#start-game-btn:hover, #change-pw-btn:hover, #sign-out-btn:hover{
+    background-color: $main-color;
+    color: $bg-color;
+}
+
+#start-game-btn:hover{
+    transition: 0.5s;
+}
+
+#change-pw-btn, #sign-out-btn{
+    background-color: $bg-color;
+    border: 2px solid $main-color;
+    padding: 10px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.box{
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+}
+
+.box-top{
+    border-bottom: 5px solid $main-color;;
+}
+
+.box-middle{
+    border-left: 5px solid $main-color;;
+    border-right: 5px solid $main-color;;
+}
+
+.box-bottom{
+    border-top: 5px solid $main-color;;
+}
+
+.container{
+    width: 40%;
+    margin-top: 2%;
+    font-size: 80px;
+    color: white;
+}
+
+#winning-message{
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: white;
+}
+
+#bg-image{
+    z-index: -1;
+    transform: rotate(-45deg);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform-origin: 285px 100px;
+}
+
+#bg-image:hover{
+    transform: rotate(-55deg);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 1050px) {
+    .home-page{
+        margin: 0 10%;
+    }
+    img {
+        height: 250px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .home-page{
+        padding: 40px;
+    }
+    .home-page form input, #change-pw-form input{
+        padding: 5px; 
+        margin: 5px 0;
+        width: 80%;
+    }
+    .home-page button, #change-pw-form button{
+        padding: 5px;
+        margin: 5px 0;
+        letter-spacing: 4px;
+    }
+    img {
+        height: 150px;
+        width: auto;
+    }
+    #bg-image{
+        transform-origin: 120px 50px;
+    }
+    .box{
+        height: 80px;
+    }
+    .container{
+        width: 80%;
+        margin-top: 5%;
+        font-size: 40px;
+        color: white;
+    }
+    #winning-message{
+        font-size: 40px
+    }
+}
+
