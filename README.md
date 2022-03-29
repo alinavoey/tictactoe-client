@@ -4,6 +4,7 @@
 This is a Tic Tac Toe app. The user will have the ability to log into an account and play a game of tic tac toe with another user. 
 
 ## Important Links
+[Link to GitHub Repo](https://alinavoey.github.io/tictactoe-client/)
 
 
 ## User Stories 
