@@ -14,7 +14,7 @@ const onSignUpFailure = function() {
 const onSignInSuccess = function(response) {
     $('#auth-display').html('<p>Sign In Successful</p>')
     $('form').trigger('reset')
-    console.log(response);
+    //console.log(response);
     store.user = response.user
 
     $('#nav-display').show()

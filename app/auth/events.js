@@ -17,10 +17,8 @@ const onCreateAccount = function() {
 
 const onSignUp = function(event) {
     event.preventDefault()
-
     const form = event.target
     const data = getFormFields(form)
-    console.log(data);
 
     authApi.signUp(data)
         .then(() => authUi.onSignUpSuccess())
@@ -29,10 +27,8 @@ const onSignUp = function(event) {
 
 const onSignIn = function(event) {
     event.preventDefault()
-
     const form = event.target
     const data = getFormFields(form)
-    console.log(data);
 
     authApi.signIn(data)
         .then((response) => authUi.onSignInSuccess(response))
@@ -41,10 +37,8 @@ const onSignIn = function(event) {
 
 const onChangePw = function(event) {
     event.preventDefault()
-
     const form = event.target
     const data = getFormFields(form)
-    console.log(data);
 
     authApi.changePw(data)
         .then(() => authUi.onChangePwSuccess())

@@ -51,14 +51,11 @@ const onGameBoard = function(event) {
     // store the value inside of the API array
     const gameArray = store.game.cells
     gameArray[boxIndex] = boxValue
-    console.log(gameArray);
 
     if (checkWinner(playerValue)) {
-        console.log('winner');
         store.game.over = true
         $('#winning-message').html(`Player ${playerValue} wins!`)
     } else if (checkDraw()) {
-        console.log('draw');
         store.game.over = true
         $('#winning-message').html(`It's a draw!`)
     }
