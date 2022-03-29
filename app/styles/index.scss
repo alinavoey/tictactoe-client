@@ -19,7 +19,7 @@ body{
 
 h1 {
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 16px;
 }
 
 h3{
@@ -59,7 +59,7 @@ hr{
 
 .home-page button:hover, #change-pw-form button:hover{
     border: 1px solid $bg-color;
-    background-color: #97d8c4;
+    background-image: linear-gradient(to right, $main-color, #97d8c4, rgb(255, 255, 176));
     color: $bg-color;
 }
 
@@ -140,5 +140,50 @@ hr{
 #bg-image:hover{
     transform: rotate(-55deg);
     transition: 0.3s;
+}
+
+@media only screen and (max-width: 1050px) {
+    .home-page{
+        margin: 0 10%;
+    }
+    img {
+        height: 250px;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .home-page{
+        padding: 40px;
+    }
+    .home-page form input, #change-pw-form input{
+        padding: 5px; 
+        margin: 5px 0;
+        width: 80%;
+    }
+    .home-page button, #change-pw-form button{
+        padding: 5px;
+        margin: 5px 0;
+        letter-spacing: 4px;
+    }
+    img {
+        height: 150px;
+        width: auto;
+    }
+    #bg-image{
+        transform-origin: 120px 50px;
+    }
+    .box{
+        height: 80px;
+    }
+    .container{
+        width: 80%;
+        margin-top: 5%;
+        font-size: 50px;
+        color: white;
+    }
+    #winning-message{
+        font-size: 50px
+    }
 }
 
